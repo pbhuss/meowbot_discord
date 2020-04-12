@@ -1,0 +1,10 @@
+version: "2"
+services:
+
+  bot:
+    image: meowbot_discord
+    build:
+      context: .
+    command: python /usr/src/app/main.py
+    volumes:
+      - ./:/usr/src/app:ro
