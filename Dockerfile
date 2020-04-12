@@ -7,5 +7,5 @@ WORKDIR $APP
 
 COPY requirements.txt requirements-dev.txt ./
 RUN pip install -r requirements.txt
-ARG ENV
-RUN if [ "$ENV" = "dev" ] ; then pip install -r requirements-dev.txt ; fi
+ARG env
+RUN if [ "$env" = "dev" ] ; then pip install -r requirements-dev.txt ; fi

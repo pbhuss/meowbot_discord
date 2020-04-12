@@ -18,3 +18,7 @@ def get_bot_token():
 
 def get_cat_api_key():
     return get_config()["cat_api_key"]
+
+
+def get_default_guild_id():
+    return get_config()["default_guild_id"]
