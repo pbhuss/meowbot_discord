@@ -10,3 +10,11 @@ services:
       - ./:/usr/src/app:ro
     tty: true
     stdin_open: true
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:5-alpine
+    command: redis-server --appendonly yes
+    volumes:
+      - ./data:/data

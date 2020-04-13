@@ -1,9 +1,11 @@
 from functools import lru_cache
 
+import redis
 import yaml
 
 
 YAML_CONF_PATH = "config/config.yaml"
+REDIS_URL = "redis://redis:6379/0"
 
 
 @lru_cache(maxsize=1)
@@ -22,3 +24,8 @@ def get_cat_api_key():
 
 def get_default_guild_id():
     return get_config()["default_guild_id"]
+
+
+@lru_cache(maxsize=1)
+def get_redis():
+    return redis.Redis.from_url(REDIS_URL)
