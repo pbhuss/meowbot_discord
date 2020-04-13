@@ -28,4 +28,4 @@ def get_default_guild_id():
 
 @lru_cache(maxsize=1)
 def get_redis():
-    return redis.Redis.from_url(REDIS_URL)
+    return redis.Redis.from_url(REDIS_URL, decode_responses=True)
