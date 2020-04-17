@@ -1,7 +1,17 @@
 from discord.ext.commands import Bot, ExtensionAlreadyLoaded
 
 
-DEFAULT_MODULES = ["8ball", "basic", "cat", "catfact", "debug", "groups", "xkcd"]
+DEFAULT_MODULES = [
+    "8ball",
+    "basic",
+    "cat",
+    "catfact",
+    "debug",
+    "groups",
+    "memes",
+    "spotify",
+    "xkcd",
+]
 
 
 def load_all_extensions(bot: Bot):
