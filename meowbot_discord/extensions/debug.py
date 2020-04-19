@@ -1,5 +1,6 @@
 import logging
 
+from discord import Game
 from discord.ext import commands
 from discord.ext.commands import Context, is_owner, Bot, ExtensionNotFound
 
@@ -42,7 +43,14 @@ async def _reload(ctx: Context, *modules):
                 await ctx.send(f"Reloaded `{module}`")
 
 
+@commands.command(name="setplaying", hidden=True)
+@is_owner()
+async def _set_playing(ctx: Context, *, name):
+    await ctx.bot.change_presence(activity=Game(name=name))
+
+
 def setup(bot: Bot):
     bot.add_command(_ping)
     bot.add_command(_debug)
     bot.add_command(_reload)
+    bot.add_command(_set_playing)

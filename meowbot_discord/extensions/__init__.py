@@ -7,9 +7,10 @@ DEFAULT_MODULES = [
     "cat",
     "catfact",
     "debug",
-    "groups",
     "memes",
+    "roles",
     "spotify",
+    "wikipedia",
     "xkcd",
 ]
 
