@@ -7,7 +7,7 @@ discord.py==1.3.4
 frogtips==3.0.5
 idna==2.10
 multidict==4.7.6
-PyYAML==5.3.1
+PyYAML==5.4
 redis==3.5.3
 requests==2.24.0
 urllib3==1.25.10
